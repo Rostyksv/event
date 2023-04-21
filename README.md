@@ -6,7 +6,6 @@ Before running the application, you need to have Docker installed on your machin
 ### Docker Installation
 1. Go to the Docker website at https://www.docker.com/ and download Docker for your operating system.
 2. Follow the installation instructions for your operating system.
-3. Once Docker is installed, open a terminal or command prompt to verify that Docker is running by running the following command:
 
 ## Installation
 To install the project, follow the steps below:
