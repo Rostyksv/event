@@ -1,0 +1,8 @@
+version: '3'
+services:
+  events-app:
+    image: 'events-app'
+    ports:
+      - "3000:3000"
+      - "3001:3001"
+      - "8080:8080"
