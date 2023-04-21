@@ -1,0 +1,1 @@
+export type EventType = 'ignore' | 'report';
