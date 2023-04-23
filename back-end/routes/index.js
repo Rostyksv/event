@@ -22,11 +22,25 @@ router.get('/events', function(req, res, next) {
 });
 
 router.post('/events/ignore', function(req, res, next) {
-  res.status(200).json({id: req.body.id})
+  try {
+    if(!req.body.id) {
+      return res.status(400).json({ error: 'Bad Request' })
+    }
+    res.status(200).json({id: req.body.id})
+  } catch (e) {
+    res.status(500).json({ error: 'Internal server error' })
+  }
 });
 
 router.post('/events/report', function(req, res, next) {
-  res.status(200).json({id: req.body.id})
+  try {
+    if(!req.body.id) {
+      return res.status(400).json({ error: 'Bad Request' })
+    }
+    res.status(200).json({id: req.body.id})
+  } catch (e) {
+    res.status(500).json({ error: 'Internal server error' })
+  }
 });
 
 module.exports = router;
