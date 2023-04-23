@@ -8,7 +8,7 @@ import {Response} from "./types";
 export function* loadEvents() {
     yield takeEvery(EventsTypes.EVENTS_LOAD, function* () {
 
-        const result: Response<EventsState> = yield axios.get('http://localhost:3001/events');
+        const result: Response<EventsState> = yield axios.get(`${process.env.REACT_APP_API_URL}/events`);
         if (result.status === 200) {
             const {data} = result;
 
@@ -23,7 +23,7 @@ export function* loadEvents() {
 
 export function* deleteEvent() {
     yield takeEvery(EventsTypes.EVENT_DELETE, function* ({payload}: any) {
-        const result: Response<{id: number}> = yield axios.post(`http://localhost:3001/events/${payload.type}`, {id: payload.id});
+        const result: Response<{id: number}> = yield axios.post(`${process.env.REACT_APP_API_URL}/events/${payload.type}`, {id: payload.id});
         if (result.status === 200) {
             const {data} = result;
 
