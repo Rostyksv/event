@@ -13,3 +13,4 @@ To install the project, follow the steps below:
 1. Clone the repository to your local machine.
 2. Run ```docker build -t events-app .``` in folder with Dockerfile to build project.
 3. Run ```docker-compose up -d``` to start.
+4. Open ```http://localhost:3000```
